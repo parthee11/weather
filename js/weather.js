@@ -1,6 +1,6 @@
 class Weather {
     constructor() {
-        this.clientID = '3bce9d3db3ccdaff5ab710ae7a7d2d8c';
+        this.clientID = // <appid> // ;
         this.location = '';
     }
 
