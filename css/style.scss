@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+body {
+    background: #1d71f2;
+}
+
+.container {
+    max-width: 424px;
+    margin: auto;
+    .card {
+        background: #5f96e9;
+        padding: 2rem;
+        margin: 2rem 0 0;
+        .card-body {
+            .loader {
+                padding-bottom: 1rem;
+            }
+            .location {
+                font-size: 2rem;
+                font-weight: 700;
+                span {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+            .day-date {
+                padding: 0.5rem 0;
+            }
+            .weather {
+                display: flex;
+                align-items: center;
+                position: relative;
+                .icon {
+                    img {
+                        width: 72px;
+                        height: 72px;
+                    }
+                }
+                .temp {
+                    font-weight: 700;
+                    font-size: 2rem;
+                }
+                .description {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .main {
+                margin: 1rem 0;
+                p {
+                    padding: 0.5rem 0;
+                }
+            }
+        }
+        button {
+            width: 100%;
+            padding: 0.5rem 1.5rem;
+            color: #1d71f2;
+            border: none;
+        }
+    }
+}
+
+.cl-popup {
+    display: none;
+    box-shadow: 0 0 200px 200px rgba($color: #0953c2, $alpha: 0.9);
+    position: absolute;
+    max-width: 375px;
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%) translateY(-50%);
+    input {
+        width: 100%;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        color: #1d71f2;
+    }
+    .btns {
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        #cancel {
+            color: red;
+        }
+    }
+    .input-err {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        color: pink;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        .card {
+            .card-body {
+                .weather {
+                    flex-wrap: wrap;
+                    .temp {
+                        width: calc(100% - 72px);
+                    }
+                    .description {
+                        position: relative;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

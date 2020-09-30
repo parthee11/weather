@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+}
+
+body {
+  background: #1d71f2;
+}
+
+.container {
+  max-width: 424px;
+  margin: auto;
+}
+
+.container .card {
+  background: #5f96e9;
+  padding: 2rem;
+  margin: 2rem 0 0;
+}
+
+.container .card .card-body .loader {
+  padding-bottom: 1rem;
+}
+
+.container .card .card-body .location {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.container .card .card-body .location span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.container .card .card-body .day-date {
+  padding: 0.5rem 0;
+}
+
+.container .card .card-body .weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .card .card-body .weather .icon img {
+  width: 72px;
+  height: 72px;
+}
+
+.container .card .card-body .weather .temp {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container .card .card-body .weather .description {
+  position: absolute;
+  right: 0;
+}
+
+.container .card .card-body .main {
+  margin: 1rem 0;
+}
+
+.container .card .card-body .main p {
+  padding: 0.5rem 0;
+}
+
+.container .card button {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  color: #1d71f2;
+  border: none;
+}
+
+.cl-popup {
+  display: none;
+  -webkit-box-shadow: 0 0 200px 200px rgba(9, 83, 194, 0.9);
+          box-shadow: 0 0 200px 200px rgba(9, 83, 194, 0.9);
+  position: absolute;
+  max-width: 375px;
+  width: 100%;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.cl-popup input {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: #1d71f2;
+}
+
+.cl-popup .btns {
+  padding-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.cl-popup .btns #cancel {
+  color: red;
+}
+
+.cl-popup .input-err {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: pink;
+}
+
+@media (max-width: 400px) {
+  .container .card .card-body .weather {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .card .card-body .weather .temp {
+    width: calc(100% - 72px);
+  }
+  .container .card .card-body .weather .description {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
